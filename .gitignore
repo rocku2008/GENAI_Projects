@@ -1,0 +1,10 @@
+env
+./env
+.env
+
+*.dll
+*.so
+*.bin
+*.zip
+*.tar
+*.whl
