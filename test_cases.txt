@@ -1,0 +1,73 @@
+    ```
+    Test Case ID: TC-001
+    Description: Verify that user can log in with correct email and password
+    Steps:
+    1. Enter valid email in email field
+    2. Enter corresponding valid password in password field
+    3. Click login button
+    Expected Result: User is redirected to the dashboard
+
+    Test Case ID: TC-002
+    Description: Verify that error message is displayed when entering incorrect email
+    Steps:
+    1. Enter invalid email in email field
+    2. Enter any password in password field
+    3. Click login button
+    Expected Result: Error message is displayed with 'Incorrect credentials'
+
+    Test Case ID: TC-003
+    Description: Verify that error message is displayed when entering incorrect password
+    Steps:
+    1. Enter valid email in email field
+    2. Enter invalid password in password field
+    3. Click login button
+    Expected Result: Error message is displayed with 'Incorrect credentials'
+
+    Test Case ID: TC-004
+    Description: Verify the system behavior with blank email field
+    Steps:
+    1. Leave the email field blank
+    2. Enter valid password in password field
+    3. Click login button
+    Expected Result: Error message is displayed saying 'Email field cannot be empty'
+
+    Test Case ID: TC-005
+    Description: Verify the system behavior with blank password field
+    Steps:
+    1. Enter valid email in email field
+    2. Leave the password field blank
+    3. Click login button
+    Expected Result: Error message is displayed saying 'Password cannot be empty'
+
+    Test Case ID: TC-006
+    Description: Verify the system behavior with both fields blank
+    Steps:
+    1. Leave the email field blank
+    2. Leave the password field blank
+    3. Click login button
+    Expected Result: Error message is displayed saying 'Email and Password cannot be empty'
+
+    Test Case ID: TC-007
+    Description: Verify the system behavior with incorrect email and password format
+    Steps:
+    1. Enter email without '@' symbol in email field
+    2. Enter password with less than 8 characters in password field
+    3. Click login button
+    Expected Result: Error message is displayed saying 'Enter a valid email' and 'Password must be at least 8 characters'
+
+    Test Case ID: TC-008
+    Description: Verify that entered password is in encrypted format
+    Steps:
+    1. Enter valid email in email field
+    2. Enter valid password in password field
+    3. Look at the entered password
+    Expected Result: Password should be displayed as encrypted characters
+    
+    Test Case ID: TC-009
+    Description: Verify system behavior when user tries to login without being connected to the internet
+    Steps:
+    1. Disconnect from the internet
+    2. Enter valid email and password
+    3. Click login button
+    Expected Result: Error message is displayed saying 'No internet connection'
+    ```

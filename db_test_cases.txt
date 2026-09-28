@@ -1,0 +1,63 @@
+
+    Test Case ID: TC-DB-001
+    Description: Verify the addition of new columns in Customer_Master table.
+    Steps:
+    1. Retrieve the schema of Customer_Master table.
+    2. Observe the names, datatypes and length of each column.
+    Expected Result: Two new columns named 'customer_segment' and 'risk_score' should be present with datatype as VARCHAR 20 and INT respectively.
+
+    Test Case ID: TC-DB-002
+    Description: Verify the modification of existing column in Customer_Master table.
+    Steps:
+    1. Retrieve the schema of Customer_Master table.
+    2. Observe the datatype and length of 'email' column.
+    Expected Result: The datatype of 'email' column should be VARCHAR with length 100.
+
+    Test Case ID: TC-DB-003
+    Description: Verify NOT NULL constraint on 'phone number' column
+    Steps:
+    1. Try to insert a record with NULL in 'phone number' column.
+    Expected Result: The database should throw a NOT NULL constraint violation error.
+
+    Test Case ID: TC-DB-004
+    Description: Verify CHECK constraint on 'risk_score' column
+    Steps:
+    1. Try to insert a record with 'risk_score' lesser than 1 and greater than 100.
+    Expected Result: The database should throw a CHECK constraint violation error.
+
+    Test Case ID: TC-DB-005
+    Description: Verify no duplicated records in the Customer_Master table
+    Steps:
+    1. Execute a SQL query to find any duplicates in the table.
+    Expected Result: No duplicate records should be found.
+
+    Test Case ID: TC-DB-006
+    Description: Data accuracy check on new columns
+    Steps:
+    1. Compare the data of new columns with the data source from which they are populated.
+    Expected Result: The data between source and new columns should be consistent.
+
+    Test Case ID: TC-DB-007
+    Description: Verify downstream ETL jobs 
+    Steps:
+    1. Run the ETL jobs
+    2. Verify whether data is being properly loaded from source to target after transformation.
+    Expected Result: ETL jobs should run successfully without any errors.
+
+    Test Case ID: TC-DB-008
+    Description: Negative test - Attempt to insert a record with 'email' column length more than 100
+    Steps:
+    1. Try to insert a record with 'email' column length more than 100.
+    Expected Result: The database should throw an constraint violation error.
+
+    Test Case ID: TC-DB-009
+    Description: Regression test - Verify downstream reports after the enhancement
+    Steps:
+    1. Compare the reports generated before and after the enhancement.
+    Expected Result: Both the reports should be consistent, and the updated data should be reflected in the new report.
+
+    Test Case ID: TC-DB-010
+    Description: Edge test - Nulls, Boundary values, Special characters handling
+    Steps:
+    1. Try to insert a record with NULL, boundary values and special characters in new columns.
+    Expected Result: The database should properly handle these values without any exceptions or errors.
