@@ -9,5 +9,6 @@ streamlit
 langchain_huggingface
 transformers
 torch
+torchvision
 PyPDF2
 faiss-cpu
